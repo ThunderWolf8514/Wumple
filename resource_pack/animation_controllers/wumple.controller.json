@@ -1,0 +1,56 @@
+
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.wumple": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["idle"],
+          "transitions": [
+            { "nervous": "query.property('wumple:state') == 2" },
+            { "confused": "query.property('wumple:state') == 4" },
+            { "happy": "query.property('wumple:state') == 3" },
+            { "move": "query.property('wumple:state') == 1" }
+          ]
+        },
+        "move": {
+          "animations": ["move"],
+          "transitions": [
+            { "nervous": "query.property('wumple:state') == 2" },
+            { "confused": "query.property('wumple:state') == 4" },
+            { "happy": "query.property('wumple:state') == 3" },
+            { "idle": "query.property('wumple:state') == 0" }
+          ]
+        },
+        "nervous": {
+          "animations": ["nervous"],
+          "transitions": [
+            { "confused": "query.property('wumple:state') == 4" },
+            { "happy": "query.property('wumple:state') == 3" },
+            { "move": "query.property('wumple:state') == 1" },
+            { "idle": "query.property('wumple:state') == 0" }
+          ]
+        },
+        "confused": {
+          "animations": ["confused"],
+          "transitions": [
+            { "nervous": "query.property('wumple:state') == 2" },
+            { "happy": "query.property('wumple:state') == 3" },
+            { "move": "query.property('wumple:state') == 1" },
+            { "idle": "query.property('wumple:state') == 0" }
+          ]
+        },
+        "happy": {
+          "animations": ["happy"],
+          "transitions": [
+            { "nervous": "query.property('wumple:state') == 2" },
+            { "confused": "query.property('wumple:state') == 4" },
+            { "move": "query.property('wumple:state') == 1" },
+            { "idle": "query.property('wumple:state') == 0" }
+          ]
+        }
+      }
+    }
+  }
+}
