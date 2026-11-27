@@ -1,0 +1,38 @@
+
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "wumple:wumple",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/wumple"
+      },
+      "geometry": {
+        "default": "geometry.wumple"
+      },
+      "animations": {
+        "idle": "animation.wumple.idle",
+        "move": "animation.wumple.move",
+        "nervous": "animation.wumple.nervous",
+        "confused": "animation.wumple.confused",
+        "happy": "animation.wumple.happy",
+        "controller": "controller.animation.wumple"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.wumple"
+      ],
+      "spawn_egg": {
+        "base_color": "#28B9A9",
+        "overlay_color": "#176B68"
+      }
+    }
+  }
+}
