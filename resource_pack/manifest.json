@@ -1,0 +1,24 @@
+
+{
+  "format_version": 2,
+  "header": {
+    "name": "Wumple Resource Pack",
+    "description": "Wumple's model, textures, and animations.",
+    "uuid": "f31a8c62-5d47-4e90-b2c6-7a1d3f8e5209",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "b82d4e16-9a53-41c7-8f20-6d3e5a1b7490",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "d7c4b1a2-8e63-4f90-a125-6b9d3e7c2041",
+      "version": [1, 0, 0]
+    }
+  ]
+}
