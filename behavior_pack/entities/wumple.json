@@ -1,0 +1,88 @@
+
+{
+  "format_version": "1.20.80",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "wumple:wumple",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "wumple",
+          "mob",
+          "animal"
+        ]
+      },
+      "minecraft:health": {
+        "value": 12,
+        "max": 12
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 0.6
+      },
+      "minecraft:movement": {
+        "value": 0.25
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "avoid_water": false
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 6,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 7,
+        "look_distance": 6,
+        "probability": 0.05
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 8
+      },
+      "minecraft:tameable": {
+        "probability": 1.0,
+        "tame_items": [
+          "minecraft:slime_ball"
+        ],
+        "tame_event": {
+          "event": "wumple:on_tame",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "wumple:on_tame": {
+        "add": {
+          "component_groups": [
+            "wumple:tamed"
+          ]
+        }
+      }
+    },
+    "component_groups": {
+      "wumple:tamed": {
+        "minecraft:is_tamed": {},
+        "minecraft:behavior.follow_owner": {
+          "priority": 5,
+          "speed_multiplier": 1.2,
+          "start_distance": 5,
+          "stop_distance": 2
+        }
+      }
+    }
+  }
+}
